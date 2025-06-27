@@ -1,5 +1,6 @@
 package com.minipedidos360.controller;
 
+import com.minipedidos360.dto.PedidoDTO;
 import com.minipedidos360.model.Pedido;
 import com.minipedidos360.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/pedidos")
@@ -17,9 +19,12 @@ public class PedidoController {
 
     // 🔹 Obtener todos los pedidos
     @GetMapping
-    public List<Pedido> listarTodos() {
-        return pedidoService.listarTodos();
+    public List<PedidoDTO> listarTodos() {
+        return pedidoService.listarTodos().stream()
+                .map(PedidoDTO::new)
+                .collect(Collectors.toList());
     }
+
 
     // 🔹 Obtener pedido por ID
     @GetMapping("/{id}")

@@ -12,7 +12,7 @@ public class Producto {
     private Long idProducto;
 
     @Column(name = "nombre_producto",length = 100, nullable = false)
-    private String nombreproducto;
+    private String nombreProducto;
 
     @Column(name = "categoria", length = 100, nullable = false)
     private String categoria;
@@ -32,8 +32,8 @@ public class Producto {
         return idProducto;
     }
 
-    public String getNombre_producto() {
-        return nombreproducto;
+    public String getNombreProducto() {
+        return nombreProducto;
     }
 
     public String getCategoria() {
@@ -53,7 +53,7 @@ public class Producto {
     }
 
     public void setNombre_producto(String nombre_producto) {
-        this.nombreproducto = nombre_producto;
+        this.nombreProducto = nombre_producto;
     }
 
     public void setCategoria(String categoria) {

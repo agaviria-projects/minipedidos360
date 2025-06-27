@@ -1,0 +1,17 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 800px;
+}
+
+button {
+  width: 100%;
+}
+
+input, select {
+  margin-bottom: 1rem;
+}
+

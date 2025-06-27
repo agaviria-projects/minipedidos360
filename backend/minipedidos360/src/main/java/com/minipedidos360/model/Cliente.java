@@ -28,6 +28,7 @@ public class Cliente {
     @OneToMany(mappedBy = "cliente",cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Pedido>pedidos;
 
+
     //constructor vacio
     public Cliente(){}
 

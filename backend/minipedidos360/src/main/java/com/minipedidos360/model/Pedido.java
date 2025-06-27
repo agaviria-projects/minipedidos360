@@ -10,7 +10,7 @@ public class Pedido {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idPedido;
+    private Long IdPedido;
 
     @Column(name = "fecha", nullable = false)
     private LocalDate fecha;
@@ -32,7 +32,7 @@ public class Pedido {
 
 
     public Long getIdpedido() {
-        return idPedido;
+        return IdPedido;
     }
 
     public LocalDate getFecha() {
@@ -52,7 +52,7 @@ public class Pedido {
     }
 
     public void setIdpedido(Long idpedido) {
-        this.idPedido = idpedido;
+        this.IdPedido = idpedido;
     }
 
     public void setFecha(LocalDate fecha) {
